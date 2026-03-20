@@ -19,13 +19,6 @@ const Cart = () => {
                 </div>
 
                 <CartCard/>
-
-                <ul className="text-white flex flex-col items-center justify-center space-y-6 mt-6">
-                    
-                </ul>
-                <div className="flex flex-col items-center justify-center mt-6">
-                    
-                </div>
                 
             </div>
         </div>

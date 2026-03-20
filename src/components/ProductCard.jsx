@@ -12,7 +12,7 @@ const ProductCard = ({product}) => {
                 <p className="text-xl font-semibold mt-auto">${product.price}</p>
                 <button className="bg-button-primary hover:bg-amber-40 py-2 px-4 border-2 border-black rounded-lg bg-white
                 w-full font-semibold cursor-pointer transition duration-200 hover:bg-neutral-400" >
-                    <i class="bi bi-cart-plus"></i> Añadir al carrito
+                    <i className="bi bi-cart-plus"></i> Añadir al carrito
                 </button>
             </div>
     </div>

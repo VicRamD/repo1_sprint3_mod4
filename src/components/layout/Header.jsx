@@ -9,7 +9,7 @@ const Header = () => {
           </a>
           <div>
               <button className='border-4 py-2 px-3 border-white text-white bg-amber-500 cursor-pointer rounded-3xl
-              hover:text-amber-500 hover:bg-white'><i class="bi bi-cart4"></i> Carrito</button>
+              hover:text-amber-500 hover:bg-white'><i className="bi bi-cart4"></i> Carrito</button>
           </div>
       </nav>
     </header>

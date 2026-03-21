@@ -18,7 +18,10 @@ const Cart = () => {
                     <button className="p-4 text-2xl cursor-pointer" onClick={close}>x</button>
                 </div>
 
-                {cartList.map((item) => <CartCard key={item.id} product={item}/>)}
+                <div className="overflow-auto">
+                    {cartList.map((item) => <CartCard key={item.id} product={item}/>)}
+                </div>
+                
                 
             </div>
         </div>

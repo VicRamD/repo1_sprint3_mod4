@@ -31,10 +31,19 @@ export const useShoppingCartlist = (listName) => {
     }
   };
 
+   const updateQuantity = (id, amount) => {
+    /*Math.max(1, item.quantity + amount): Compara el número 1 con el resultado de la cuenta 
+    y se queda con el más alto para evitar que baje a 0.
+    La eliminación será con el botón con icono de basurero*/
+    setCartlist(prev => prev.map(item => item.id === id ? { ...item, quantity: Math.max(1, item.quantity + amount) } : item));
+  };
+
+  const removeFromShoppingCartlist = (id) => setCartlist(prev => prev.filter(item => item.id !== id));
+
   //Guardar en Local Storage cuando cambie
   useEffect(() => {
     localStorage.setItem(listName, JSON.stringify(cartList));
   }, [cartList, listName])
 
-  return {cartList, setCartlist, addToCartlist}
+  return {cartList, setCartlist, addToCartlist, updateQuantity, removeFromShoppingCartlist}
 }

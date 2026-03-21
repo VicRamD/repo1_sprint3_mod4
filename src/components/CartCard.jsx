@@ -1,9 +1,12 @@
+import { useCartContext } from "../contexts/CartContext";
+
 const CartCard = ({product}) => {
+    const { updateQuantity, removeFromShoppingCartlist } = useCartContext();
   return (
     <div className="bg-white p-4 flex gap-4 rounded-lg w-120 border-b-2 border-amber-400">
         <img src={product.img} alt={product.alt}
             className="size-32 rounded-md object-cover"/>
-        <div className="w-full">
+        <div className="">
             <div className="grow">
                 {/**Nombre y precio */}
                 <div className="flex justify-between">
@@ -14,11 +17,11 @@ const CartCard = ({product}) => {
                 {/**Cantidad y quitar */}
                 <div className="flex justify-between">
                     <div className="flex gap-2">
-                        <i className="bi bi-plus-circle-fill cursor-pointer hover:text-green-600"></i>
+                        <i className="bi bi-plus-circle-fill cursor-pointer hover:text-green-600" onClick={() => updateQuantity(product.id, 1)}></i>
                         <p>{product.quantity}</p>
-                        <i className="bi bi-dash-circle-fill cursor-pointer hover:text-red-600"></i>
+                        <i className="bi bi-dash-circle-fill cursor-pointer hover:text-red-600"  onClick={() => updateQuantity(product.id, -1)}></i>
                     </div>
-                    <i className="bi bi-trash cursor-pointer hover:text-red-600"></i>
+                    <i className="bi bi-trash cursor-pointer hover:text-red-600" onClick={() => removeFromShoppingCartlist(product.id)}></i>
                 </div>
             </div>
                 

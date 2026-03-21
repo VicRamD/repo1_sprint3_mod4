@@ -6,11 +6,11 @@ const CartContext = createContext();
 
 //Crear el proveedor del contexto
 export const CartProvider = ({ children }) => {
-    const {isOpen, open, close} = useCart();
+    const {isOpen, open, close, toggle} = useCart();
     const { cartList, addToCartlist, updateQuantity, removeFromShoppingCartlist } = useShoppingCartlist("furntireCart");
 
     return(
-        <CartContext.Provider value={{isOpen, open, close, cartList, addToCartlist, updateQuantity, removeFromShoppingCartlist}}>
+        <CartContext.Provider value={{isOpen, open, close, toggle, cartList, addToCartlist, updateQuantity, removeFromShoppingCartlist}}>
             { children }
         </CartContext.Provider>
     );

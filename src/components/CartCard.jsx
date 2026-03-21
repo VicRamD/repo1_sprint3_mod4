@@ -3,17 +3,17 @@ import { useCartContext } from "../contexts/CartContext";
 const CartCard = ({product}) => {
     const { updateQuantity, removeFromShoppingCartlist } = useCartContext();
   return (
-    <div className="bg-white p-4 flex gap-4 rounded-lg w-120 border-b-2 border-amber-400">
+    <div className="bg-white p-4 mx-auto flex gap-4 rounded-lg w-11/12 border-b-2 border-amber-400">
         <img src={product.img} alt={product.alt}
             className="size-32 rounded-md object-cover"/>
-        <div className="">
-            <div className="grow">
+        <div className="size-36">
+            <div className="my-auto">
                 {/**Nombre y precio */}
                 <div className="flex justify-between">
-                    <h3 className="text-xl font-semibold">{product.name}</h3>
+                    <h3 className="text-xl font-semibold truncate">{product.name}</h3>
                 </div>
                 {/**Descripción */}
-                <p className="text-xl">&#36;{product.price}</p>
+                <p className="text-xl">&#36;{product.totalPrice}</p>
                 {/**Cantidad y quitar */}
                 <div className="flex justify-between">
                     <div className="flex gap-2">
@@ -24,8 +24,10 @@ const CartCard = ({product}) => {
                     <i className="bi bi-trash cursor-pointer hover:text-red-600" onClick={() => removeFromShoppingCartlist(product.id)}></i>
                 </div>
             </div>
-                
+            
         </div>
+                
+        
     </div>
   )
 }

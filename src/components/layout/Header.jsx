@@ -2,7 +2,7 @@ import logo from "../../assets/logo-muebles-deco.png"
 import { useCartContext } from "../../contexts/CartContext";
 
 const Header = () => {
-  const {open} = useCartContext();
+  const {toggle} = useCartContext();
 
   return (
     <header>
@@ -12,7 +12,7 @@ const Header = () => {
           </a>
           <div>
               <button className='border-4 py-2 px-3 border-white text-white bg-amber-500 cursor-pointer rounded-3xl
-              hover:text-amber-500 hover:bg-white' onClick={open}><i className="bi bi-cart4"></i> Carrito</button>
+              hover:text-amber-500 hover:bg-white' onClick={toggle}><i className="bi bi-cart4"></i> Carrito</button>
           </div>
       </nav>
     </header>

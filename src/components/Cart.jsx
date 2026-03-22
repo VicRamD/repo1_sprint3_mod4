@@ -2,7 +2,7 @@ import CartCard from "./CartCard";
 import { useCartContext } from "../contexts/CartContext";
 
 const Cart = () => {
-    const { isOpen, close, cartList } = useCartContext();
+    const { isOpen, close, cartList, calculateTotal } = useCartContext();
 
     return (
         <div className={`relative lg:w-2/5 ${isOpen ? '' : 'hidden'} lg:transform lg:translate-0`}>
@@ -21,7 +21,7 @@ const Cart = () => {
                 </div>
                 
                 <div className="w-full h-1/12 bg-white flex justify-between shrink-0">
-                    <h3 className="p-4 text-2xl text-right w-full">Total: {cartList.reduce((accumulator, currentValue) =>accumulator+ Number(currentValue.totalPrice), 0)} </h3>
+                    <h3 className="p-4 text-2xl text-right w-full">Total: {calculateTotal()} </h3>
                 </div>                
             </div>
         </div>

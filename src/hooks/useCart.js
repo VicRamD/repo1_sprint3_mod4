@@ -58,10 +58,14 @@ export const useShoppingCartlist = (listName) => {
 
   const removeFromShoppingCartlist = (id) => setCartlist(prev => prev.filter(item => item.id !== id));
 
+  const calculateTotal = () => cartList.reduce((accumulator, currentValue) =>accumulator+ Number(currentValue.totalPrice), 0);
+
   //Guardar en Local Storage cuando cambie
   useEffect(() => {
     localStorage.setItem(listName, JSON.stringify(cartList));
   }, [cartList, listName])
 
-  return {cartList, setCartlist, addToCartlist, updateQuantity, removeFromShoppingCartlist}
+  
+
+  return {cartList, setCartlist, addToCartlist, updateQuantity, removeFromShoppingCartlist, calculateTotal}
 }

@@ -3,7 +3,7 @@ import { useCartContext } from "../contexts/CartContext";
 const CartCard = ({product}) => {
     const { updateQuantity, removeFromShoppingCartlist } = useCartContext();
   return (
-    <div className="bg-white p-4 mx-auto flex gap-4 rounded-lg w-11/12 xl:w-10/12 xl:justify-center border-b-2 border-amber-400">
+    <div className="bg-white p-4 mx-auto flex gap-4 rounded-lg w-11/12 xl:w-10/12 xl:justify-center border-b-2 border-amber-400 dark:border-gray-900">
         <img src={product.img} alt={product.alt}
             className="size-32 rounded-md object-cover"/>
         <div className="size-32 xl:w-36">

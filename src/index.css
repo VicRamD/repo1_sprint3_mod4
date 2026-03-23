@@ -5,3 +5,75 @@
 .open-sans {
     font-family: "Open Sans", sans-serif;
 }
+
+@custom-variant elegance {
+  &:where([data-theme="elegance"], [data-theme="elegance"] *) {
+    @slot;
+  }
+}
+
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+}
+
+/*Define qué existe/
+@theme {
+  --color-100: oklch(0.85 0.1 240); /* Azul claro /
+  --color-200: oklch(0.75 0.15 240);
+  --color-300: oklch(0.65 0.2 240);
+  --color-400: oklch(0.55 0.25 240);
+  --color-500: oklch(0.45 0.3 240);
+  --color-600: oklch(0.35 0.25 240);
+} */
+
+/* define como se ve en cada modo /
+@layer theme {
+  :root {
+    --color-100: 240 5% 95%; /* Elegance: tonos beige /
+    --color-200: 240 4% 90%;
+    --color-300: 240 3% 85%;
+    --color-400: 240 2% 80%;
+    --color-500: 240 1% 75%;
+    --color-600: 30 2% 70%;
+  }
+
+  [data-theme="dark"] {
+    --color-100: 240 5% 20%; /* Dark: tonos grises oscuros /
+    --color-200: 240 4% 25%;
+    --color-300: 240 3% 30%;
+    --color-400: 240 2% 35%;
+    --color-500: 240 1% 40%;
+    --color-600: 30 2% 45%;
+  }
+
+  [data-theme="elegance"] {
+    --color-100: 20 10% 95%; /* Elegance personalizado /
+    --color-200: 20 8% 90%;
+    --color-300: 20 6% 85%;
+    --color-400: 20 4% 80%;
+    --color-500: 20 2% 75%;
+    --color-600: 30 3% 70%;
+  }
+} */
+
+
+@theme {
+    /*Dark /
+    --color-dark-100: oklch(0.4459 0 0);
+    --color-dark-200: oklch(0.8545 0 0);
+    --color-dark-300: oklch(0.5897 0 0);
+    --color-dark-400: oklch(0.4459 0 0);
+    --color-dark-500: oklch(0.2645 0 0);
+    --color-dark-600: oklch(0 0 0);
+    /* ... */
+
+    /* Neutral elegance */
+    --color-elegance-100: oklch(0.9136 0.03 63.64);
+    --color-elegance-200: oklch(0.9136 0.0583 63.64);
+    --color-elegance-300: oklch(0.8095 0.024 65.39);
+    --color-elegance-400: oklch(0.6124 0.0472 62.19);
+    --color-elegance-500: oklch(0.4307 0.0548 61.35);
+    --color-elegance-600: oklch(0.36 0.0548 61.35);
+} 

@@ -6,9 +6,9 @@ export const useTheme = () => {
     });
 
     const themes = {
+        classic: "Classic",
         elegance: "Elegance",
-        dark: "Dark",
-        classic: "Classic"
+        dark: "Dark"
     }
 
     const changeTheme = (themeName) => setTheme(themeName);

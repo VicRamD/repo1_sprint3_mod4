@@ -9,7 +9,7 @@ const Cart = () => {
 
             <div className={`fixed top-0 right-0 h-screen w-full lg:h-screen transform
             ${isOpen ? 'translate-x-0' : 'translate-x-full'}  transition-transform duration-300 ease-in-out z-45
-            flex flex-col bg-amber-700 dark:bg-mist-600`}>
+            flex flex-col bg-amber-700 dark:bg-mist-600 elegance:bg-elegance-500`}>
                 
                 <div className="w-full h-1/12 bg-white flex justify-between shrink-0">
                     <h2 className="p-4 text-2xl">Mi carrito</h2>

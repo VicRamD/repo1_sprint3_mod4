@@ -12,17 +12,3 @@ export const furnitureList = [
     {id: 10, name: "Placard", alt:"Imagen de placard", img: "/furniture/placard-dormitorio.webp", price: "500000"},
     {id: 11, name: "Silla estilo bar", alt:"Imagen de silla bar", img: "/furniture/silla-bar-comedor.webp", price: "75000"},
 ]
-
-/**
- * SOLUCIÓN -> para este caso lo mejor es usar lacarpeta public (porque lo tenés en un array/Json).
-
-move tus carpetas de imágenes de src/assets/furniture a public/furniture
-
-en tu archivo furnitureList, cambia las rutas para que sean relativas a la raíz del servidor (que será la carpeta public):
-// Antes
-img: "/-src-/assets/furniture/biblioteca.webp"
-
-// Ahora (Vite entiende que debe buscar en la raíz del deploy)
-img: "/furniture/biblioteca.webp" 
-
- */
